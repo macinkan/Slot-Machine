@@ -16,7 +16,16 @@ namespace Slot_Machine
 
         protected void PlayButton_Click(object sender, EventArgs e)
         {
-            string[] images = new string[] {}
+            string image = spinReel();
+            Reel1.ImageUrl = "/Images/" + image + ".png";
+        }
+
+        private string spinReel()
+        {
+            string[] images = new string[] { "Bar", "Bell", "Cherry", "Clover", "Diamond", "HorseShoe", "Lemon", "Orange", "Plum", "Seven", "Strawberry", "Watermellon" };
+            Random random = new Random();
+            return images[random.Next(11)];
+
         }
     }
 }
