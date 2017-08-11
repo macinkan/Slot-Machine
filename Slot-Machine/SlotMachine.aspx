@@ -25,7 +25,7 @@
         <asp:Label ID="ResultLabel" runat="server" Text="ResultLabel"></asp:Label>
         <br />
         <br />
-        <asp:Label ID="MoneyLabel" runat="server" Text="MoneyLabel"></asp:Label>
+        <asp:Label ID="MoneyLabel" runat="server" Text="$100"></asp:Label>
         <br />
         <br />
         Odds<br />
@@ -33,7 +33,11 @@
         Two Cherries = 3x your bet<br />
         Three Cherries = 4x your bet<br />
         Three Sevens = Jackpot!, 100x your bet<br />
-        However, even just one bar and you loose your bet.</div>
+        However, even just one bar and you loose your bet.<br />
+        <br />
+        <asp:Label ID="TestLabel" runat="server" Text="Label"></asp:Label>
+    
+    </div>
     </form>
 </body>
 </html>
