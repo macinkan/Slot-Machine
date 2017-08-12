@@ -27,29 +27,11 @@ namespace Slot_Machine
         protected void PlayButton_Click(object sender, EventArgs e)
         {
             int bet = 0;
-            int purse = int.Parse(ViewState["purse"].ToString());
-
             if (!int.TryParse(BetInput.Text, out bet)) return;
-
-            validateBet(bet,purse);
-
             int winnings = pullLever(bet);
             displayResult(bet, winnings);
             adjustPurse(bet, winnings);
             displayPurse();
-        }
-
-        private void validateBet(int bet, int purse)
-        {
-            if (bet == 0)
-            {
-                ResultLabel.Text = ("You must bet more than $0");
-            }
-            else if (bet > purse)
-            {
-                ResultLabel.Text = ("You can't bet that much.");
-            }
-            else return;
         }
 
         //Update phase
